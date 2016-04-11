@@ -7,13 +7,13 @@
 import glob from 'glob';
 import { join } from 'path';
 
-module.exports = function(source) {
+export default function(source) {
   this.cacheable();
   const target = this.target;
   const callback = this.async();
 
   if (target === 'node') {
-    source = source.replace('import \'babel-polyfill\';', ''); // eslint-disable-line no-param-reassign
+    source = source.replace('import \'babel/polyfill\';', ''); // eslint-disable-line no-param-reassign
   }
 
   glob('**/*.{js,jsx}', { cwd: join(__dirname, '../../pages') }, (err, files) => {
@@ -37,7 +37,7 @@ module.exports = function(source) {
       }
 
       if (target === 'node' || path === '/404' || path === '/500') {
-        return `  '${path}': () => require('./pages/${file}').default,`;
+        return `  '${path}': () => require('./pages/${file}'),`;
       }
 
       return `  '${path}': () => new Promise(resolve => require(['./pages/${file}'], resolve)),`;
@@ -49,4 +49,4 @@ module.exports = function(source) {
 
     return callback(new Error('Cannot find any routes.'));
   });
-};
+}
