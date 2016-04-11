@@ -514,8 +514,8 @@ module.exports =
         'li',
         { className: 'Navigation-item' },
         _react2.default.createElement(
-          'a',
-          { className: 'Navigation-link', href: '/about', onClick: _Link2.default.handleClick },
+          _Link2.default,
+          { to: 'about', onClick: '{Link.handleClick}' },
           'About'
         )
       )
