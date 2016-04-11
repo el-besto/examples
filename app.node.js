@@ -508,6 +508,7 @@ module.exports =
    */
 
   function Navigation() {
+    var publicPath = _config2.default.publicPath;
     return _react2.default.createElement(
       'ul',
       { className: 'Navigation', role: 'menu' },
@@ -516,7 +517,7 @@ module.exports =
         { className: 'Navigation-item' },
         _react2.default.createElement(
           'a',
-          { className: 'Navigation-link', href: '`${config.publicPath}/`', onClick: _Link2.default.handleClick },
+          { className: 'Navigation-link', href: publicPath + '/', onClick: _Link2.default.handleClick },
           'Home'
         )
       ),
@@ -525,7 +526,7 @@ module.exports =
         { className: 'Navigation-item' },
         _react2.default.createElement(
           'a',
-          { className: 'Navigation-link', href: '`${config.publicPath}/about`', onClick: _Link2.default.handleClick },
+          { className: 'Navigation-link', href: publicPath + '/about', onClick: _Link2.default.handleClick },
           'About'
         )
       )
