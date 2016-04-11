@@ -35,7 +35,7 @@ module.exports =
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "el-besto.github.io/";
+/******/ 	__webpack_require__.p = "/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -516,7 +516,7 @@ module.exports =
         { className: 'Navigation-item' },
         _react2.default.createElement(
           'a',
-          { className: 'Navigation-link', href: '{config.publicPath}/', onClick: _Link2.default.handleClick },
+          { className: 'Navigation-link', href: '`${config.publicPath}/`', onClick: _Link2.default.handleClick },
           'Home'
         )
       ),
@@ -525,7 +525,7 @@ module.exports =
         { className: 'Navigation-item' },
         _react2.default.createElement(
           'a',
-          { className: 'Navigation-link', href: '{config.publicPath}/about', onClick: _Link2.default.handleClick },
+          { className: 'Navigation-link', href: '`${config.publicPath}/about`', onClick: _Link2.default.handleClick },
           'About'
         )
       )
@@ -551,7 +551,7 @@ module.exports =
           user: 'el-besto',
           repo: 'examples'
       },
-      publicPath: 'el-besto.github.io/'
+      publicPath: 'http://el-besto.github.io/'
   };
 
 /***/ },
