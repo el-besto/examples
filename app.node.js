@@ -805,13 +805,17 @@ module.exports =
           _react2.default.createElement(
             'p',
             null,
-            'Here I am.'
+            'Coming soon.'
           )
         );
       }
     }]);
     return _class;
-  }(_react.Component);
+  }(_react.Component); /**
+                        * React Static Boilerplate
+                        * https://github.com/koistya/react-static-boilerplate
+                        * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+                        */
 
   exports.default = _class;
 
@@ -1012,7 +1016,7 @@ module.exports =
           _react2.default.createElement(
             'h1',
             null,
-            'Need links here?'
+            'Home Page'
           ),
           _react2.default.createElement(
             'p',
