@@ -52,11 +52,11 @@ module.exports =
   });
   exports.routes = exports.route = undefined;
 
-  var _regenerator = __webpack_require__(26);
+  var _regenerator = __webpack_require__(27);
 
   var _regenerator2 = _interopRequireDefault(_regenerator);
 
-  var _asyncToGenerator2 = __webpack_require__(23);
+  var _asyncToGenerator2 = __webpack_require__(24);
 
   var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
@@ -64,7 +64,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(30);
+  var _reactDom = __webpack_require__(31);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -82,19 +82,19 @@ module.exports =
 
   var routes = {
     '/404': function _() {
-      return __webpack_require__(13).default;
-    }, '/500': function _() {
       return __webpack_require__(14).default;
-    }, '/about': function about() {
+    }, '/500': function _() {
       return __webpack_require__(15).default;
-    }, '/blog': function blog() {
+    }, '/about': function about() {
       return __webpack_require__(16).default;
-    }, '/blog/test-article-one': function blogTestArticleOne() {
+    }, '/blog': function blog() {
       return __webpack_require__(17).default;
-    }, '/blog/test-article-two': function blogTestArticleTwo() {
+    }, '/blog/test-article-one': function blogTestArticleOne() {
       return __webpack_require__(18).default;
-    }, '/': function _() {
+    }, '/blog/test-article-two': function blogTestArticleTwo() {
       return __webpack_require__(19).default;
+    }, '/': function _() {
+      return __webpack_require__(20).default;
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   /**
@@ -281,15 +281,15 @@ module.exports =
 
   var _ExecutionEnvironment = __webpack_require__(9);
 
-  var _createBrowserHistory = __webpack_require__(27);
+  var _createBrowserHistory = __webpack_require__(28);
 
   var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-  var _createMemoryHistory = __webpack_require__(28);
+  var _createMemoryHistory = __webpack_require__(29);
 
   var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
-  var _useQueries = __webpack_require__(29);
+  var _useQueries = __webpack_require__(30);
 
   var _useQueries2 = _interopRequireDefault(_useQueries);
 
@@ -325,7 +325,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(20);
+  __webpack_require__(21);
 
   var _Navigation = __webpack_require__(12);
 
@@ -364,11 +364,11 @@ module.exports =
     value: true
   });
 
-  var _extends2 = __webpack_require__(24);
+  var _extends2 = __webpack_require__(25);
 
   var _extends3 = _interopRequireDefault(_extends2);
 
-  var _objectWithoutProperties2 = __webpack_require__(25);
+  var _objectWithoutProperties2 = __webpack_require__(26);
 
   var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
 
@@ -396,7 +396,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(21);
+  __webpack_require__(22);
 
   var _Location = __webpack_require__(8);
 
@@ -489,13 +489,23 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(22);
+  __webpack_require__(23);
 
   var _Link = __webpack_require__(11);
 
   var _Link2 = _interopRequireDefault(_Link);
 
+  var _config = __webpack_require__(13);
+
+  var _config2 = _interopRequireDefault(_config);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
 
   function Navigation() {
     return _react2.default.createElement(
@@ -506,7 +516,7 @@ module.exports =
         { className: 'Navigation-item' },
         _react2.default.createElement(
           'a',
-          { className: 'Navigation-link', href: '/', onClick: _Link2.default.handleClick },
+          { className: 'Navigation-link', href: '{config.publicPath}/', onClick: _Link2.default.handleClick },
           'Home'
         )
       ),
@@ -514,22 +524,38 @@ module.exports =
         'li',
         { className: 'Navigation-item' },
         _react2.default.createElement(
-          _Link2.default,
-          { to: 'about', onClick: '{Link.handleClick}' },
+          'a',
+          { className: 'Navigation-link', href: '{config.publicPath}/about', onClick: _Link2.default.handleClick },
           'About'
         )
       )
     );
-  } /**
-     * React Static Boilerplate
-     * https://github.com/koistya/react-static-boilerplate
-     * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-     */
+  }
 
   exports.default = Navigation;
 
 /***/ },
 /* 13 */
+/***/ function(module, exports) {
+
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
+  exports.default = {
+      title: 'Angelo Cisneros Code Examples and Practice',
+      description: 'Code examples and practice.',
+      googleAnalyticsId: 'UA-XXXXX-X',
+      github: {
+          user: 'el-besto',
+          repo: 'examples'
+      },
+      publicPath: 'el-besto.github.io/'
+  };
+
+/***/ },
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -601,7 +627,7 @@ module.exports =
   exports.default = _class;
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -676,7 +702,7 @@ module.exports =
   exports.default = _class;
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -748,7 +774,7 @@ module.exports =
   exports.default = _class;
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -820,7 +846,7 @@ module.exports =
   exports.default = _class;
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -892,7 +918,7 @@ module.exports =
   exports.default = _class;
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -964,7 +990,7 @@ module.exports =
   exports.default = _class;
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1036,7 +1062,7 @@ module.exports =
   exports.default = _class;
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(7)();
@@ -1050,7 +1076,7 @@ module.exports =
 
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(7)();
@@ -1064,7 +1090,7 @@ module.exports =
 
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(7)();
@@ -1078,49 +1104,49 @@ module.exports =
 
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports) {
 
   module.exports = require("babel-runtime/helpers/asyncToGenerator");
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports) {
 
   module.exports = require("babel-runtime/helpers/extends");
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports) {
 
   module.exports = require("babel-runtime/helpers/objectWithoutProperties");
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports) {
 
   module.exports = require("babel-runtime/regenerator");
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/createBrowserHistory");
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/createMemoryHistory");
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/useQueries");
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
